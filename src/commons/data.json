@@ -1,0 +1,14 @@
+{
+    "appName": "Quanment",
+    "navigation": { "name": "History", "link": "/history" },
+    "quantities": [{
+            "name": "length"
+        },
+        {
+            "name": "temperature"
+        },
+        {
+            "name": "volume"
+        }
+    ]
+}
