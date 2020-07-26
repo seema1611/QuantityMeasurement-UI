@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/quantity.css'
 
 class Quantity extends Component {
 
