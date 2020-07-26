@@ -22,7 +22,7 @@
 #length>div {
     width: 10%;
     height: 40%;
-    background: transparent url('../images/length-icon.svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/length-icon.svg') 0% 0% no-repeat padding-box;
 }
 
 #length:hover,
@@ -37,7 +37,7 @@
 
 #length:hover div,
 .length-active div {
-    background: transparent url('../images/length-hover-icon.svg') 0% 0% no-repeat padding-box !important;
+    background: transparent url('../assets/length-hover-icon.svg') 0% 0% no-repeat padding-box !important;
 }
 
 #length:hover p,
@@ -51,7 +51,7 @@
 }
 
 #temperature>div {
-    background: transparent url('../images/temperature-icon.svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/temperature-icon.svg') 0% 0% no-repeat padding-box;
 }
 
 #temperature:hover,
@@ -66,7 +66,7 @@
 
 #temperature:hover div,
 .temperature-active div {
-    background: transparent url('../images/temperature-hover-icon.svg') 0% 0% no-repeat padding-box !important;
+    background: transparent url('../assets/temperature-hover-icon.svg') 0% 0% no-repeat padding-box !important;
 }
 
 #temperature:hover p,
@@ -80,7 +80,7 @@
 }
 
 #volume>div {
-    background: transparent url('../images/volume-icon.svg') 0% 0% no-repeat padding-box;
+    background: transparent url('../assets/volume-icon.svg') 0% 0% no-repeat padding-box;
 }
 
 #volume:hover,
@@ -95,7 +95,7 @@
 
 #volume:hover div,
 .volume-active div {
-    background: transparent url('../images/volume-hover-icon.svg') 0% 0% no-repeat padding-box !important;
+    background: transparent url('../assets/volume-hover-icon.svg') 0% 0% no-repeat padding-box !important;
 }
 
 #volume:hover p,
