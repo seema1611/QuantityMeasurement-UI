@@ -7,7 +7,6 @@ class Home extends Component {
         super(props);
         this.state = {  
                         activeQuantity:this.props.quantities[0],
-                        activeUnit: this.props.quantities[0].units[0]
                     }
     }
 
