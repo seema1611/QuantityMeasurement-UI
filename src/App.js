@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Home from './components/Home.jsx';
-import appData from './commons/data.json';
+import appData from './alldata/data.json';
 
 function App() {
   return (
