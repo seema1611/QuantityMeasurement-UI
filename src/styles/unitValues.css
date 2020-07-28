@@ -11,3 +11,8 @@
     color: #000000;
 }
 
+#unit>span {
+    flex: 1;
+    text-transform: uppercase;
+}
+
