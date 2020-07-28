@@ -16,3 +16,12 @@
     text-transform: uppercase;
 }
 
+.unit-value {
+    width: 100%;
+    flex: 2;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E5DAFC;
+    outline: none;
+    font-size: larger;
+    text-indent: 5%;
+}
