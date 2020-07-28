@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import '../styles/home.css'
-import Quantity from '../components/Quantity.jsx'
+import '../styles/MainComponent.css'
+import Quantity from './Quantity.jsx'
 
-class Home extends Component {
+class MainComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {  
@@ -27,4 +27,4 @@ class Home extends Component {
         );
     }
 }
-export default Home;
+export default MainComponent;
