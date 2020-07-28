@@ -3,7 +3,7 @@
     "navigation": { "name": "History", "link": "/history" },
     "quantities": [{
             "name": "length",
-            "units": ["Kilometer", "Meter", "Centimeter", "Millimeter", "Micrometer", "Mile"]
+            "units": ["Feet", "Inch", "Yard", "Kilometer", "Meter", "Centimeter", "Millimeter", "Micrometer", "Mile"]
         },
         {
             "name": "temperature",

@@ -1,0 +1,53 @@
+$blue: #446dff;
+$latoFont: Lato;
+$white: #ffffff;
+$homeBackground: #f5f6fa;
+$quantiyNameColor: #c9c9c9;
+$lengthColor: #0ec098;
+$temperatureColor: #fd5160;
+$volumeColor: #7224ff;
+$quantityBoxSadow: 0px 3px 6px #00000029;
+
+html,
+body,
+#root,
+.App {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: $latoFont;
+  text-align: center;
+  background-color: $homeBackground;
+}
+
+header {
+  height: 18vh;
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40%;
+    font-family: $latoFont;
+  }
+
+  article {
+    height: 60%;
+    background-color: $blue;
+    color: white;
+    font-family: $latoFont;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+  }
+
+  #logo {
+    font-weight: 600;
+    font-size: 2vw;
+  }
+
+  #nav-link {
+    font-size: 1vw;
+  }
+}
