@@ -1,18 +1,30 @@
-import React from 'react';
-import './App.css';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Header from './components/Header.jsx';
-import MainComponent from './components/MainComponent.jsx';
-import appData from './alldata/data.json';
+import React from "react";
+import Header from "./components/Header";
+import "./css/styles.scss";
+import Main from "./components/MainComponent";
 
 function App() {
+  var message = ["from", "to"];
+  var unit = [
+    {
+      measurementType: "Length",
+      units: ["Metre", "Inch", "Foot"],
+    },
+    {
+      measurementType: "Temperature",
+      units: ["Kelvin", "Celcius", "Fahrenheit"],
+    },
+    {
+      measurementType: "Volume",
+      units: ["Litre", "Millilitre", "Gallon"],
+    },
+  ];
+
   return (
-    <Router>
-      <Header name={appData.appName} navLinks={appData.navigation}></Header>
-      <Route path="/" exact>
-        <MainComponent quantities={appData.quantities}></MainComponent>
-      </Route>
-    </Router> 
+    <div className="App">
+      <Header />
+      <Main unit={unit} message={message} />
+    </div>
   );
 }
 

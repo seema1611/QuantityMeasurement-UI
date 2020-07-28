@@ -1,20 +1,17 @@
-import React, { Component } from 'react'
-import '../styles/quantity.css'
+import React, { Component } from "react";
 
 class Quantity extends Component {
-
-    shouldComponentUpdate(nextProps) {
-        return (this.props.isActive !== nextProps.isActive)
-    }
-
-    render() {
-        return ( 
-            <button ref={this.props.quantity.name} className={this.props.isActive ? `quantity ${this.props.quantity.name}-active` : `quantity`} 
-                    id={this.props.quantity.name} onClick={this.props.onlick.bind(this, this.props.quantity)}>
-                <div></div>
-                <p>{this.props.quantity.name}</p>
-            </button>
-        );
-    }
+  render() {
+    return (
+      <button
+        id={this.props.quantity.measurementType}
+        onClick={() => this.props.setQuantity(this.props.quantity)}
+      >
+        <div id="quantity-image"></div>
+        <div id="quantity-name">{this.props.quantity.measurementType}</div>
+      </button>
+    );
+  }
 }
+
 export default Quantity;

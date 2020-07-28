@@ -1,16 +1,13 @@
-import React from 'react'
-import {Link} from 'react-router-dom';
-import '../styles/header.scss'
+import React from 'react';
 
-function Header(props) {
-    return ( 
-        <header>
-            <nav>
-                <div id="logo"><Link to="/" className="nav-link">{props.name}</Link></div>
-                <div id="nav-links"><Link to={props.navLinks.link} className="nav-link">{props.navLinks.name}</Link></div>
-            </nav>
-            <article><p>Welcome to Quantity Measurement</p></article>
-        </header>
-    );
+function Header() {
+    return <header>
+        <nav>
+            <div id="header-quanment">Quanment</div>
+            <div id="header-history">History</div>
+        </nav>
+        <article>Welcome To Quantity Measurement</article>
+    </header>
 }
+
 export default Header;
