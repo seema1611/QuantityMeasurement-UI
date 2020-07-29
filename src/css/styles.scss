@@ -173,12 +173,20 @@ header {
   margin-top: 80px;
 }
 
-#from,
+#from{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  width: 40%;
+  font-family: "adobe-clean", sans-serif;
+}
+
 #to {
   display: flex;
   flex-direction: column;
   margin-top: 15px;
-  width: 45%;
+  margin-right: 10%;
+  width: 40%;
   font-family: "adobe-clean", sans-serif;
 }
 
