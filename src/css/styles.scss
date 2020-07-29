@@ -8,6 +8,21 @@ $temperatureColor: #fd5160;
 $volumeColor: #7224ff;
 $quantityBoxSadow: 0px 3px 6px #00000029;
 
+length-image-size {
+  width: 12px;
+  height: 50px;
+}
+
+temperature-image-size {
+  width: 30px;
+  height: 58px;
+}
+
+volume-image-size {
+  width: 50px;
+  height: 50px;
+}
+
 html,
 body,
 #root,
@@ -40,18 +55,15 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 2vw;
-    cursor: default;
   }
 
   #header-quanment {
     font-weight: 600;
     font-size: 2vw;
-    cursor: default;
   }
 
   #header-history {
     font-size: 1vw;
-    cursor: default;
   }
 }
 
@@ -69,7 +81,6 @@ header {
     font-weight: 600;
     width: 100%;
     margin-bottom: 5px;
-    cursor: default;
   }
 
   #quantity {
@@ -80,10 +91,12 @@ header {
 
   #Length,
   #Temperature,
-  #Volume {
+  #Volume,
+  #Length-active,
+  #Temperature-active,
+  #Volume-active {
     width: 25%;
-    height: 120%;
-    margin-right: 10%;
+    height: 100%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -97,39 +110,38 @@ header {
   }
 
   #Length #quantity-image {
-    width: 12px;
-    height: 50px;
-    background: transparent url("../assets/length-icon.svg")  0% 0% no-repeat
-    padding-box;
+    @extend length-image-size;
+    background: transparent url("../assets/length-icon.svg") 0% 0% no-repeat
+      padding-box;
   }
 
   #Temperature #quantity-image {
-    width: 30px;
-    height: 58px;
+    @extend temperature-image-size;
     background: transparent url("../assets/temperature-icon.svg");
   }
 
   #Volume #quantity-image {
-    width: 50px;
-    height: 50px;
-    background: transparent url("../assets/volume-icon.svg");
+    @extend volume-image-size;
+    background: transparent url("../assets/volume-icon.svg") 0% 0% no-repeat
+      padding-box;
   }
 
   #quantity-name {
-    font-size: 1vw;
+    font-size: 1.2vw;
     width: 100%;
     margin-top: 5px;
     color: $quantiyNameColor;
   }
 
   #Length:hover,
-  #Length:focus {
+  #Length-active {
     background: #edfdf9;
     box-shadow: $quantityBoxSadow;
     border: 1px solid $lengthColor;
     #quantity-image {
+      @extend length-image-size;
       background: transparent url("../assets/length-hover-icon.svg") 0% 0% no-repeat
-      padding-box;
+        padding-box;
     }
     #quantity-name {
       font-weight: bold;
@@ -138,11 +150,12 @@ header {
   }
 
   #Temperature:hover,
-  #Temperature:focus {
+  #Temperature-active {
     background: #ffeef0;
     box-shadow: $quantityBoxSadow;
     border: 1px solid $temperatureColor;
     #quantity-image {
+      @extend temperature-image-size;
       background: transparent url("../assets/temperature-hover-icon.svg");
     }
     #quantity-name {
@@ -152,11 +165,12 @@ header {
   }
 
   #Volume:hover,
-  #Volume:focus {
+  #Volume-active {
     background: #e8ddff;
     box-shadow: $quantityBoxSadow;
     border: 1px solid $volumeColor;
     #quantity-image {
+      @extend volume-image-size;
       background: transparent url("../assets/volume-hover-icon.svg") 0% 0% no-repeat
         padding-box;
     }
@@ -173,26 +187,17 @@ header {
   margin-top: 80px;
 }
 
-#from{
-  display: flex;
-  flex-direction: column;
-  margin-top: 15px;
-  width: 40%;
-  font-family: "adobe-clean", sans-serif;
-}
-
+#from,
 #to {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
-  margin-right: 10%;
-  width: 40%;
-  font-family: "adobe-clean", sans-serif;
+  margin-top: 10px;
+  width: 45%;
 }
 
 #from input,
 #to input {
-  font-size: 45px;
+  font-size: 30px;
   border-radius: 3px;
   border: 1px solid $quantiyNameColor;
   outline: none;
@@ -200,7 +205,7 @@ header {
 
 #from select,
 #to select {
-  padding: 20px;
+  padding: 8px;
   border-radius: 3px;
   border: 1px solid $quantiyNameColor;
   outline: none;
@@ -221,7 +226,10 @@ header {
 
     #Length,
     #Temperature,
-    #Volume {
+    #Volume,
+    #Length-active,
+    #Temperature-active,
+    #Volume-active {
       width: 30%;
       padding: 5px;
     }
