@@ -5,8 +5,7 @@ class Quantity extends Component {
     return (
       <button
         id={this.props.quantity.measurementType}
-        onClick={() => this.props.setQuantity(this.props.quantity)}
-      >
+        onClick={() => this.props.setQuantity(this.props.quantity)}>
         <div id="quantity-image"></div>
         <div id="quantity-name">{this.props.quantity.measurementType}</div>
       </button>
