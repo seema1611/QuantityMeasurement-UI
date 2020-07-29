@@ -55,15 +55,18 @@ header {
     align-items: center;
     justify-content: center;
     font-size: 2vw;
+    cursor: default;
   }
 
   #header-quanment {
     font-weight: 600;
     font-size: 2vw;
+    cursor: default;
   }
 
   #header-history {
     font-size: 1vw;
+    cursor: default;
   }
 }
 
@@ -81,6 +84,7 @@ header {
     font-weight: 600;
     width: 100%;
     margin-bottom: 5px;
+    cursor: default;
   }
 
   #quantity {
@@ -96,7 +100,7 @@ header {
   #Temperature-active,
   #Volume-active {
     width: 25%;
-    height: 100%;
+    height: 150%;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;

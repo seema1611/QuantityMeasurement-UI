@@ -5,7 +5,7 @@ class UnitValues extends Component {
     return (
       <div id={this.props.name}>
         <span id="converter-table-name">{this.props.name}</span>
-        <input type="text" />
+        <input type="number"/>
         <select>
           {this.props.units.map((unit) => (
             <option>{unit}</option>
