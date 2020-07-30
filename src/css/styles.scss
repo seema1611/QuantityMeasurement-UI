@@ -195,7 +195,7 @@ header {
 #to {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 50px;
   width: 45%;
 }
 
@@ -247,7 +247,7 @@ header {
   }
 }
 
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 411px) {
   .home {
     #quantity {
       height: 30%;
