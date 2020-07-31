@@ -1,22 +1,36 @@
 import React, { Component } from "react";
-import Converter from "../serviceMain/service.js";
+import Service from "../service/service.js";
 
 class Quantity extends Component {
 
   constructor(props) {
     super(props);
-    this.converter=new Converter();
+    this.service=new Service();
+    this.state={data: [], subunit: [], index: 0}
   }
 
   componentWillMount(){
     this.loadUnits();
   }
 
-  async loadUnits () {
-    const units=await this.converter.loadMainUnit();
+  async loadUnits() {
+    const units = await this.service.loadMainUnit();
+    // const subUnits = await this.service.loadSubUnit(units);
+    const subUnits = await this.service.loadSubUnit("TEMPERATURE");
+    this.setState({
+      data: units,
+      subunit: subUnits,
+    })
     console.log(units);
+    console.log(subUnits)
   }
   
+  async loadSubUnits(id) {
+    const val = await this.service.loadSubUnit(this.state.data[id]);
+    this.setState({
+      subunit: val,
+    })
+  }
 
   render() {
     return (
