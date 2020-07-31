@@ -1,6 +1,22 @@
 import React, { Component } from "react";
+import Converter from "../serviceMain/service.js";
 
 class Quantity extends Component {
+
+  constructor(props) {
+    super(props);
+    this.converter=new Converter();
+  }
+
+  componentWillMount(){
+    this.loadUnits();
+  }
+
+  async loadUnits () {
+    const units=await this.converter.loadMainUnit();
+    console.log(units);
+  }
+  
 
   render() {
     return (

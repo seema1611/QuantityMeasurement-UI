@@ -8,7 +8,7 @@ class App extends Component {
     var unit = [
       {
         measurementType: "Length",
-        units: ["Metre", "Inch", "Feet","Millimetre"],
+        units: ["Feet", "Inch", "Yard","Meter","Millimetre"],
       },
       {
         measurementType: "Temperature",
