@@ -1,29 +1,77 @@
-import React, { Component } from "react";
-import Header from "./components/Header";
-import "./css/styles.scss";
-import Main from "./components/MainComponent";
+// import React, { useState } from "react";
+import React  from "react";
+import Header from "./components/header";
+import Welcome from "./components/welcome";
+import Quantity from "./components/quantityButtons";
+import "./styles/header.scss";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-class App extends Component {
+class App extends React.Component {
+
+  constructor(props){
+    super(props)
+      this.state = {
+       fromUnit : [], toUnit : [], quantity : [], result : []
+      }
+  }
+
+  data = {
+    fromUnit : "", toUnit : "", quantity : "", result : ""
+  };
+
+  unitConversionRecord = (fromUnit,toUnit,quantity,result) => {
+      this.setState({
+       fromUnit : [...this.state.fromUnit,fromUnit], toUnit : [...this.state.toUnit,toUnit],
+       quantity : [...this.state.quantity,quantity], result : [...this.state.result,result]
+      })
+      console.log(this.state.fromUnit.length + " " +toUnit+ " " +quantity+ " "+result)
+  }
+
   render() {
-    var unit = [
+    var Units = [
       {
-        measurementType: "Length",
-        units: ["Feet", "Inch", "Yard","Meter","Millimetre"],
+        unit: "Length",
+        subunits: [
+          "Kilometer",
+          "Meters",
+          "Centimeter",
+          "Millimeter",
+          "Micrometer",
+          "Mile",
+          "Foot",
+          "Inch",
+        ],
       },
       {
-        measurementType: "Temperature",
-        units: ["Kelvin", "Celcius", "Fahrenheit"],
+        unit: "Tempreture",
+        subunits: ["Celsius", "Fahrenheit", "Kelvin"],
       },
       {
-        measurementType: "Volume",
-        units: ["Litre", "Millilitre", "Gallon"],
+        unit: "Volume",
+        subunits: ["Litres", "Millilitres", "Gallons"],
       },
     ];
 
     return (
-      <div className="App">
-        <Header />
-        <Main unit={unit} />
+      <div className="main-window">
+        <Router>
+          <Header />
+          <Welcome msg="Welcome To Quantity Measurement" />
+          <Switch>
+            <Route
+              path="/"
+              exact
+              render={() => (
+                <div>
+                  <div className="choose-type"></div>
+                  <div>
+                    <Quantity units={Units} conversions={this.unitConversionRecord}/>
+                  </div>
+                </div>
+              )}
+            />
+          </Switch>
+        </Router>
       </div>
     );
   }

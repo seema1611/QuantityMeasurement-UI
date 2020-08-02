@@ -1,13 +1,17 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Header() {
-    return <header>
-        <nav>
-            <div id="header-quanment">Quanment</div>
-            <div id="header-history">History</div>
-        </nav>
-        <article>Welcome To Quantity Measurement</article>
-    </header>
+function header() {
+  return (
+    <div className="header">
+      <Link to="/">
+        <a href>Quanment</a>
+      </Link>
+      <Link to="/history">
+        <li>History</li>
+      </Link>
+    </div>
+  );
 }
 
-export default Header;
+export default header;
