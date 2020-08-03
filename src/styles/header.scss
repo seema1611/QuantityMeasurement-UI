@@ -1,11 +1,11 @@
-$inactive-scale-icon:url('../assets/length-icon.svg');
-$active-scale-icon:url('../assets/length-hover-icon.svg');
-$inactive-hot-icon:url('../assets/volume-icon.svg');
-$active-hot-icon:url('../assets/volume-hover-icon.svg');
-$inactive-beaker-icon:url('../assets/temperature-icon.svg');
-$active-beaker-icon:url('../assets/temperature-hover-icon.svg');
-$inactive-weight-icon:url('../assets/temperature-hover-icon.svg');
-$active-weight-icon:url('../assets/temperature-icon.svg');
+$active-scale-icon:url('../assets/length-icon.svg');
+$inactive-scale-icon:url('../assets/length-hover-icon.svg');
+$active-hot-icon:url('../assets/volume-icon.svg');
+$inactive-hot-icon:url('../assets/volume-hover-icon.svg');
+$active-beaker-icon:url('../assets/temperature-icon.svg');
+$inactive-beaker-icon:url('../assets/temperature-hover-icon.svg');
+$active-weight-icon:url('../assets/temperature-hover-icon.svg');
+$inactive-weight-icon:url('../assets/temperature-icon.svg');
 
 @import './colors/colorCodes.scss';
 // @import './fontStyles/fontStyles.scss';
@@ -127,12 +127,19 @@ $active-weight-icon:url('../assets/temperature-icon.svg');
 	}
 }
 
-
 .quantity-button{
 	display: flex;
 	justify-content: center;
-	width: 20%;
+	flex-wrap: wrap;
+	margin: auto;
+	width: 45%;
 }
+
+// .LENGTH0{
+// 	width: 20%;
+// 	height: 90%;
+// 	background: transparent url("../assets/length-icon.svg") 0% 0% no-repeat
+// }
 
 .quantity-buttonInput{
 	display: flex;
