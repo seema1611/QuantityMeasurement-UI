@@ -5,6 +5,7 @@ import Welcome from "./components/welcome";
 import Quantity from "./components/quantityButtons";
 import "./styles/header.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HistoryDetails from "./components/historyContent";
 
 class App extends React.Component {
 
@@ -69,6 +70,12 @@ class App extends React.Component {
                   </div>
                 </div>
               )}
+            />
+            {console.log(this.state)}
+            <Route
+              path="/history"
+              exact
+              render={() => <HistoryDetails data={this.state.data} />}
             />
           </Switch>
         </Router>
