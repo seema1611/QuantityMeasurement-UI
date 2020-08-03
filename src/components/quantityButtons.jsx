@@ -74,8 +74,8 @@ class QuantityButtons extends Component {
         </div>
         <div className="quantity-button">
           {this.state.data.map((data, index) => (
-            <div 
-              id ="each" className={data + this.state.index}
+            <div
+              className={data + this.state.index}
               tabIndex="0"
               onClick={() => {
                 this.toggleClass(index);

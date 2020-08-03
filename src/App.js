@@ -1,5 +1,4 @@
-// import React, { useState } from "react";
-import React  from "react";
+import React from "react";
 import Header from "./components/header";
 import Welcome from "./components/welcome";
 import Quantity from "./components/quantityButtons";
@@ -8,25 +7,22 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HistoryDetails from "./components/historyContent";
 
 class App extends React.Component {
-
-  constructor(props){
-    super(props)
-      this.state = {
-       fromUnit : [], toUnit : [], quantity : [], result : []
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      history: [],
+      data: [],
+    };
   }
 
-  data = {
-    fromUnit : "", toUnit : "", quantity : "", result : ""
+  unitConversionRecord = (data) => {
+    var value = JSON.parse(localStorage.getItem("history"));
+    this.setState({
+      history: [...this.state.history, data],
+      data: value,
+    });
+    localStorage.setItem("history", JSON.stringify(this.state.history));
   };
-
-  unitConversionRecord = (fromUnit,toUnit,quantity,result) => {
-      this.setState({
-       fromUnit : [...this.state.fromUnit,fromUnit], toUnit : [...this.state.toUnit,toUnit],
-       quantity : [...this.state.quantity,quantity], result : [...this.state.result,result]
-      })
-      console.log(this.state.fromUnit.length + " " +toUnit+ " " +quantity+ " "+result)
-  }
 
   render() {
     var Units = [
@@ -66,7 +62,10 @@ class App extends React.Component {
                 <div>
                   <div className="choose-type"></div>
                   <div>
-                    <Quantity units={Units} conversions={this.unitConversionRecord}/>
+                    <Quantity
+                      units={Units}
+                      conversions={this.unitConversionRecord}
+                    />
                   </div>
                 </div>
               )}
