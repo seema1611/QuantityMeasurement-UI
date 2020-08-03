@@ -1,9 +1,6 @@
 import React from "react";
 
 class historyContent extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
 
   history = [
     {
@@ -32,10 +29,10 @@ class historyContent extends React.Component {
   render() {
     return (
       <div>
-        <th>FROM</th>
-        <th>TO</th>
-        <th>VALUE</th>
-        <th>RESULT</th>
+        <th>BASE-UNIT</th>
+        <th>TARGET-UNIT</th>
+        <th>INPUT-VALUE</th>
+        <th>CONVERSION-OUTPUT</th>
         {this.props.data.map((data) => (
           <div>
             <td>{data.fromUnit}</td>
