@@ -1,6 +1,9 @@
 import React from "react";
 
 class historyContent extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  // }
 
   history = [
     {
@@ -26,13 +29,17 @@ class historyContent extends React.Component {
     },
   ];
 
+  clearData = () => {
+    this.props.clear();
+  };
+
   render() {
     return (
-      <div>
-        <th>BASE-UNIT</th>
-        <th>TARGET-UNIT</th>
-        <th>INPUT-VALUE</th>
-        <th>CONVERSION-OUTPUT</th>
+      <div className='history-button'>
+        <th>FROM</th>
+        <th>TO</th>
+        <th>VALUE</th>
+        <th>RESULT</th>
         {this.props.data.map((data) => (
           <div>
             <td>{data.fromUnit}</td>
@@ -41,6 +48,9 @@ class historyContent extends React.Component {
             <td>{data.result}</td>
           </div>
         ))}
+        <button onClick={this.clearData}>
+          CLEAR HISTORY
+        </button>
       </div>
     );
   }
